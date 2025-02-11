@@ -67,8 +67,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 # How to open
 Enter cmd /k code . in the folder directory<br>
-Don't forget to open the XAMPP <br>
-Go to terminal and type php artisan serve <br>
+Open XAMPP <br>
+Open VSCode, open new terminal, and type php artisan serve, don't forget to click the localhost 127 <br>
 Go to your browser and type http://localhost:8000/product
 
 # Additional Notes
