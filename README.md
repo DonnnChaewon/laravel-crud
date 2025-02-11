@@ -64,3 +64,23 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+# How to open
+Enter cmd /k code .
+Don't forget to open the XAMPP
+Go to terminal and type php artisan serve
+Go to your browser and type http://localhost:8000/product
+
+# Auto Increment
+Everytime after you add or delete a data, you have to enter this on SQL:
+```
+SELECT @max_value := MAX(id) FROM products;
+
+SET @max_value := IFNULL(@max_value, 1);
+SET @new_value := @max_value + 1;
+
+SET @sql := CONCAT('ALTER TABLE products AUTO_INCREMENT = ', @new_value);
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;
+```
